@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETWORK - coworking სივრცე თბილისში</title>
+<meta name="description" content="ნეთვორქი - coworking სივრცე ილია ჭავჭავაძის გამზირზე, თბილისში. ღიაა 24/7. თავისუფალი და ფიქსირებული მაგიდები, პირადი ოფისები და შეხვედრების ოთახები.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600;700;900&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Utility bar. Small, brown, and full of the facts that would otherwise
+     clutter the hero - the address, the hours, the phone. -->
+<div class="utility">
+  <div class="wrap utility-inner">
+    <span class="mt">ესკიზი</span>
+    <span class="sep" aria-hidden="true">✦</span>
+    <span class="mt">COWORKING თბილისში</span>
+    <span class="sep" aria-hidden="true">✦</span>
+    <span class="mt">ჭავჭავაძის 33</span>
+    <span class="sep" aria-hidden="true">✦</span>
+    <span class="mt">ღიაა 24/7</span>
+    <span class="sep" aria-hidden="true">✦</span>
+    <a href="tel:+995505555885">+995 505 55 58 85</a>
+  </div>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#/" data-link aria-label="NETWORK, მთავარი">
+      <span class="logo-box">NET</span><span class="logo-tail">work</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="მთავარი ნავიგაცია">
+      <a href="#/" data-link data-route="/" class="mt">მთავარი</a>
+      <a href="#/plans" data-link data-route="/plans" class="mt">ტარიფები</a>
+      <a href="#/offices" data-link data-route="/offices" class="mt">ოფისები</a>
+      <a href="#/events" data-link data-route="/events" class="mt">ივენთები</a>
+      <a href="#/calendar" data-link data-route="/calendar" class="mt">კალენდარი</a>
+      <a href="#/community" data-link data-route="/community" class="mt">სივრცე</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-line btn-sm mt" href="#/book?type=tour" data-link>ტური</a>
+      <a class="btn btn-red btn-sm mt" href="#/book?type=day" data-link>დღიური ბარათი</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="მენიუს გახსნა" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================ მთავარი ============================ -->
+<section class="view" data-view="/">
+
+  <div class="hero">
+    <span class="hero-watermark" aria-hidden="true">NETWORK</span>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow mt">ნამდვილი მაგიდა · ვაკე-საბურთალო</p>
+        <h1 class="display mt">იმუშავე<br>შენებურად.</h1>
+        <p class="lead">
+          დამოუკიდებელი coworking სივრცე ილია ჭავჭავაძის გამზირზე.
+          ღიაა 24 საათი. <b>გადაიხადე</b> დღეში, კვირაში ან თვეში -
+          გრძელვადიანი ხელშეკრულების გარეშე.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-red" href="#/book?type=day" data-link><span class="mt">დღიური ბარათი</span></a>
+          <a class="btn btn-line" href="#/book?type=tour" data-link><span class="mt">20-წუთიანი ტური</span></a>
+        </div>
+
+        <ul class="stats">
+          <li><b data-placeholder>[წელი]</b><span class="mt">დაარსდა</span></li>
+          <li><b>33</b><span class="mt">ჭავჭავაძის გამზირი</span></li>
+          <li><b>24/7</b><span class="mt">ღია კარი</span></li>
+          <li><b data-placeholder>[N]</b><span class="mt">სამუშაო ადგილი</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-media">
+        <figure class="figure">
+          <div class="photo photo-hero" data-photo="მთავარი დარბაზი, ფანჯრებთან">
+            <span class="tag-note"><b data-tbd></b><i class="mt">დღიური</i></span>
+          </div>
+          <figcaption>— მთავარი დარბაზი, ჭავჭავაძის 33</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- The promises that matter, on a strip that keeps moving so they read as
+       a run of claims rather than a list to be audited. -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow mt">ტარიფები</p>
+      <div class="section-head">
+        <h2 class="display mt">აირჩიე, რაც გიხდება.</h2>
+        <a class="link-more mt" href="#/plans" data-link>ყველა ტარიფი დეტალურად →</a>
+      </div>
+      <p class="section-sub">გასაწევრიანების საფასური არ არის. გრძელვადიანი ვალდებულება არ არის.</p>
+      <div class="plan-grid" id="home-plans"></div>
+      <p class="tbd-note">ფასები შესავსებია - ციფრები კლიენტისგან უნდა მოვიდეს.</p>
+    </div>
+  </section>
+
+  <section class="band band-dark">
+    <div class="wrap quote-layout">
+      <div class="quote-side">
+        <b class="bignum" data-placeholder>[წელი]</b>
+        <p class="mt quote-since">და ჯერ კიდევ აქ</p>
+        <p class="quote-blurb" data-placeholder>
+          [ვინ მუშაობს აქ - დამფუძნებლები, ფრილანსერები, პატარა გუნდები.
+          ეს ტექსტი კლიენტისგან უნდა მოვიდეს.]
+        </p>
+      </div>
+      <blockquote class="quote">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <p data-placeholder>[წევრის ციტატა - რეალური შეფასება კლიენტისგან.]</p>
+        <footer>
+          <span class="quote-avatar" aria-hidden="true"></span>
+          <span><b class="mt" data-placeholder>[სახელი]</b><i data-placeholder>[წევრი - წლიდან]</i></span>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow mt">შეხვედრები და ივენთები</p>
+        <h2 class="display mt">ოთახი.<br><em>და სკამები.</em></h2>
+        <p class="lead">
+          პრეზენტაცია, გასაუბრება, გუნდური შეკრება ან საღამოს ივენთი.
+          წევრებისთვის ფასი შემცირებულია.
+        </p>
+        <ul class="minitable" id="home-rooms"></ul>
+        <a class="btn btn-red" href="#/offices" data-link><span class="mt">ოთახების ნახვა</span></a>
+      </div>
+      <figure class="figure">
+        <div class="photo photo-wide" data-photo="შეხვედრების ოთახი, დიდი მაგიდა">
+          <span class="tag-note tag-right"><b data-placeholder>[N]</b><i class="mt">ადგილი</i></span>
+        </div>
+        <figcaption>— შეხვედრების ოთახი, პროექტორით</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band band-tan">
+    <div class="wrap two-col two-col-rev">
+      <figure class="figure">
+        <div class="photo photo-wide" data-photo="პირადი ოფისი, შუშის კარი"></div>
+        <figcaption>— პირადი ოფისი, ავეჯით</figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow mt">პირადი ოფისები</p>
+        <h2 class="display mt">კარი,<br>რომელიც იკეტება.</h2>
+        <p class="lead">
+          ოთახები 1-დან 4 ადამიანამდე. ავეჯით ან ცარიელი. თვიდან თვემდე,
+          ხელშეკრულების გარეშე.
+        </p>
+        <div class="price-pair">
+          <div class="price-block">
+            <span class="mt">იწყება</span>
+            <b data-tbd></b>
+          </div>
+          <div class="price-block price-block-alt">
+            <span class="mt">ახლა თავისუფალი</span>
+            <b data-placeholder>[N]</b>
+          </div>
+        </div>
+        <a class="link-more mt" href="#/offices" data-link>ყველა ოფისი და თავისუფლება →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow mt">რა არის სივრცეში</p>
+      <h2 class="display mt">ყველაფერი, რაც სამუშაოდ სჭირდება.</h2>
+      <ul class="amenity-grid" id="home-amenities"></ul>
+    </div>
+  </section>
+
+  <section class="band band-tan">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow mt">როგორ მოხვიდე</p>
+        <h2 class="display mt">ჭავჭავაძის 33.</h2>
+        <p class="addr">
+          ილია ჭავჭავაძის გამზირი 33<br>
+          თბილისი 0179, ვაკე-საბურთალო
+        </p>
+        <p>
+          უფასო პარკინგი ქუჩაში. ადაპტირებული შესასვლელი და სველი წერტილი.<br>
+          <span data-placeholder>[უახლოესი მეტრო და ავტობუსის მარშრუტები - შესავსებია]</span>
+        </p>
+        <p class="addr-contact">
+          <a href="tel:+995505555885">+995 505 55 58 85</a><br>
+          <a href="https://www.instagram.com/networktbilisi/" target="_blank" rel="noopener">@networktbilisi</a>
+        </p>
+      </div>
+      <figure class="figure">
+        <div class="photo photo-wide" data-photo="შენობის შესასვლელი ქუჩიდან"></div>
+        <figcaption>— შესასვლელი, ჭავჭავაძის გამზირიდან</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band cta-band">
+    <div class="wrap">
+      <div class="cta-box">
+        <p class="eyebrow mt">ხელშეკრულება არ არის. ზედმეტი სიტყვები არ არის.</p>
+        <h2 class="display mt">შემოიარე.<br>დაჯექი მაგიდასთან.</h2>
+        <p class="cta-price" data-tbd></p>
+        <p class="lead">აიღე დღიური ბარათი ან დაჯავშნე 20-წუთიანი ტური. თუ მოგეწონა, დარჩი.</p>
+        <div class="btn-row">
+          <a class="btn btn-red" href="#/book?type=day" data-link><span class="mt">დღიური ბარათი</span></a>
+          <a class="btn btn-line" href="#/book?type=tour" data-link><span class="mt">ტურის დაჯავშნა</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="wrap news-inner">
+      <div>
+        <h3 class="display mt">სიახლეები 33-დან.</h3>
+        <p>იშვიათად. ელფოსტას არასდროს გავცემთ.</p>
+      </div>
+      <form class="news-form" id="news-form" novalidate>
+        <input type="email" id="news-email" placeholder="you@work.com" aria-label="ელფოსტა">
+        <button type="submit" class="btn btn-red"><span class="mt">გამოწერა</span></button>
+      </form>
+    </div>
+    <p class="news-msg" id="news-msg" aria-live="polite"></p>
+  </section>
+
+</section>
+
+<!-- ============================ ტარიფები ============================ -->
+<section class="view" data-view="/plans" hidden>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow mt">ტარიფები</p>
+      <h1 class="display mt">ერთი დღე, ერთი თვე<br>ან შენი ოფისი.</h1>
+      <p class="lead">
+        ყველა ტარიფში შედის ინტერნეტი, ყავა და ჩაი, სამზარეულო, ფონ-ბუთები და
+        დასასვენებელი ზონა. გასაწევრიანების საფასური არ არის.
+      </p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="plan-grid plan-grid-full" id="all-plans"></div>
+      <p class="tbd-note">ყველა ფასი შესავსებია - ციფრები კლიენტისგან უნდა მოვიდეს.</p>
+    </div>
+  </section>
+
+  <section class="band band-tan">
+    <div class="wrap">
+      <p class="eyebrow mt">შედის ყველგან</p>
+      <h2 class="display mt">რა შედის ყველა ტარიფში.</h2>
+      <ul class="amenity-grid" id="plans-amenities"></ul>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap faq-wrap">
+      <p class="eyebrow mt">კითხვები</p>
+      <h2 class="display mt">ხშირად დასმული.</h2>
+      <div class="faq" id="plans-faq"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================ ოფისები ============================ -->
+<section class="view" data-view="/offices" hidden>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow mt">ოფისები და ოთახები</p>
+      <h1 class="display mt">დახურული კარი,<br>როცა გჭირდება.</h1>
+      <p class="lead">პირადი ოფისები მცირე გუნდებისთვის და შეხვედრების ოთახები საათობრივად.</p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow mt">პირადი ოფისები</p>
+      <h2 class="display mt">ოთახები 1-დან 4-მდე.</h2>
+      <div class="office-grid" id="office-grid"></div>
+      <p class="tbd-note">ოფისების რაოდენობა, ზომები და ფასები შესავსებია.</p>
+    </div>
+  </section>
+
+  <section class="band band-tan">
+    <div class="wrap">
+      <p class="eyebrow mt">საათობრივად</p>
+      <h2 class="display mt">შეხვედრების ოთახები.</h2>
+      <div class="office-grid" id="room-grid"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================ ივენთები ============================ -->
+<section class="view" data-view="/events" hidden>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow mt">ივენთები</p>
+      <h1 class="display mt">რა ხდება სივრცეში.</h1>
+      <p class="lead">
+        ნეთვორქინგ შეხვედრები, მასტერკლასები და პროფესიული ვორქშოფები.
+        წევრებისთვის უმეტესობა უფასოა.
+      </p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="event-list" id="event-list"></div>
+      <p class="tbd-note">ივენთები ნიმუშია - რეალური განრიგი კლიენტისგან უნდა მოვიდეს.</p>
+    </div>
+  </section>
+
+  <section class="band band-dark">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow mt">დაიქირავე სივრცე</p>
+        <h2 class="display mt">შენი ივენთი,<br><em>ჩვენი დარბაზი.</em></h2>
+        <p class="lead">
+          საღამოს სივრცე თავისუფლდება - პროექტორით, სკამებით და ყავით.
+        </p>
+        <a class="btn btn-red" href="#/book?type=event" data-link><span class="mt">ივენთის შესახებ წერა</span></a>
+      </div>
+      <figure class="figure">
+        <div class="photo photo-wide" data-photo="ივენთი სივრცეში, საღამო"></div>
+        <figcaption>— საღამოს ივენთი, მთავარი დარბაზი</figcaption>
+      </figure>
+    </div>
+  </section>
+</section>
+
+<!-- ============================ კალენდარი ============================ -->
+<section class="view" data-view="/calendar" hidden>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow mt">კალენდარი</p>
+      <h1 class="display mt">ივენთები და<br>ოთახების დატვირთვა.</h1>
+      <p class="lead">აირჩიე დღე, რომ ნახო რა ხდება და რომელი ოთახია თავისუფალი.</p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap cal-layout">
+      <div class="cal">
+        <div class="cal-head">
+          <button type="button" class="cal-nav" id="cal-prev" aria-label="წინა თვე">‹</button>
+          <h2 id="cal-title" class="mt">-</h2>
+          <button type="button" class="cal-nav" id="cal-next" aria-label="შემდეგი თვე">›</button>
+        </div>
+        <div class="cal-dow mt" aria-hidden="true">
+          <span>ორშ</span><span>სამ</span><span>ოთხ</span><span>ხუთ</span><span>პარ</span><span>შაბ</span><span>კვი</span>
+        </div>
+        <div class="cal-grid" id="cal-grid" role="grid" aria-label="თვის კალენდარი"></div>
+        <p class="cal-legend"><span class="dot"></span> ამ დღეს ივენთია</p>
+      </div>
+
+      <aside class="cal-side">
+        <h3 id="cal-day-title" class="mt">-</h3>
+        <div id="cal-day-events"></div>
+        <h4 class="mt">ოთახების დატვირთვა</h4>
+        <div id="cal-availability"></div>
+        <a class="btn btn-red btn-block" id="cal-book" href="#/book" data-link><span class="mt">ამ დღეს დაჯავშნა</span></a>
+      </aside>
+    </div>
+    <div class="wrap">
+      <p class="tbd-note">დატვირთვა ნიმუშია - რეალურ საიტზე ეს ჯავშნების სისტემიდან წამოვა.</p>
+    </div>
+  </section>
+</section>
+
+<!-- ============================== სივრცე ============================== -->
+<section class="view" data-view="/community" hidden>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow mt">სივრცის შესახებ</p>
+      <h1 class="display mt">სივრცე, რომელსაც<br>ადამიანები ქმნიან.</h1>
+      <p class="lead">
+        ნეთვორქი ქალის მფლობელობაშია და მუშაობს როგორც ღია, უსაფრთხო სივრცე
+        ყველასთვის, ვინც აქ მუშაობს.
+      </p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <ul class="value-grid">
+        <li>
+          <h3 class="mt">ქალის მფლობელობაში</h3>
+          <p>სივრცე დაარსებულია და იმართება ქალის მიერ.</p>
+        </li>
+        <li>
+          <h3 class="mt">LGBTQ+ მეგობრული</h3>
+          <p>ღია და უსაფრთხო სივრცე, მათ შორის ტრანს-ადამიანებისთვის.</p>
+        </li>
+        <li>
+          <h3 class="mt">ადაპტირებული გარემო</h3>
+          <p>ეტლით მოსარგებლეთათვის შესასვლელი, სამუშაო ადგილი და სველი წერტილი.</p>
+        </li>
+        <li>
+          <h3 class="mt">გენდერულად ნეიტრალური</h3>
+          <p>სველი წერტილები ყველასთვის ხელმისაწვდომია.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band band-tan">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow mt">ისტორია</p>
+        <h2 class="display mt">როგორ დაიწყო.</h2>
+        <p class="lead" data-placeholder>
+          [სივრცის ისტორია - როდის გაიხსნა, ვინ დააარსა, რატომ. ეს ტექსტი
+          კლიენტისგან უნდა მოვიდეს.]
+        </p>
+      </div>
+      <figure class="figure">
+        <div class="photo photo-wide" data-photo="გუნდი ან დამფუძნებელი"></div>
+        <figcaption>— დამფუძნებელი</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow mt">წევრები</p>
+      <h2 class="display mt">ვინ მუშაობს აქ.</h2>
+      <ul class="member-grid" id="member-grid"></ul>
+      <p class="tbd-note">წევრების სია ნიმუშია - რეალური სახელები და ლოგოები მხოლოდ მათი თანხმობით.</p>
+    </div>
+  </section>
+</section>
+
+<!-- ============================ დაჯავშნა ============================ -->
+<section class="view" data-view="/book" hidden>
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow mt">დაჯავშნა</p>
+      <h1 class="display mt">დაგვიტოვე მოთხოვნა.</h1>
+      <p class="lead">შეავსე ფორმა და გამოგვიგზავნე - დაგიკავშირდებით სამუშაო საათებში.</p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap book-layout">
+      <form class="book-form" id="book-form" novalidate>
+
+        <fieldset class="field">
+          <legend class="mt">რისი დაჯავშნა გინდა?</legend>
+          <div class="choice-row" id="book-type"></div>
+        </fieldset>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="book-date" class="mt">თარიღი</label>
+            <input type="date" id="book-date" name="date" required>
+            <p class="err" data-err="date"></p>
+          </div>
+          <div class="field" id="book-time-field">
+            <label for="book-time" class="mt">დაწყების დრო</label>
+            <input type="time" id="book-time" name="time" value="10:00">
+            <p class="err" data-err="time"></p>
+          </div>
+        </div>
+
+        <div class="field-row" id="book-extra">
+          <div class="field">
+            <label for="book-duration" class="mt">ხანგრძლივობა</label>
+            <select id="book-duration" name="duration">
+              <option value="1">1 საათი</option>
+              <option value="2">2 საათი</option>
+              <option value="4">4 საათი</option>
+              <option value="8" selected>მთელი დღე</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="book-people" class="mt">ადამიანების რაოდენობა</label>
+            <input type="number" id="book-people" name="people" min="1" max="20" value="1">
+            <p class="err" data-err="people"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="book-name" class="mt">სახელი და გვარი</label>
+          <input type="text" id="book-name" name="name" autocomplete="name" required>
+          <p class="err" data-err="name"></p>
+        </div>
+
+        <div class="field">
+          <label for="book-contact" class="mt">ტელეფონი ან ელფოსტა</label>
+          <input type="text" id="book-contact" name="contact" autocomplete="tel" required>
+          <p class="err" data-err="contact"></p>
+        </div>
+
+        <div class="field">
+          <label for="book-note" class="mt">შენიშვნა <span class="optional">(არასავალდებულო)</span></label>
+          <textarea id="book-note" name="note" rows="3"></textarea>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" id="book-consent" required>
+          <span>ვეთანხმები, რომ დამიკავშირდნენ ამ მოთხოვნასთან დაკავშირებით.</span>
+        </label>
+        <p class="err" data-err="consent"></p>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-red"><span class="mt">მოთხოვნის გაგზავნა</span></button>
+        </div>
+        <p class="form-note">
+          ესკიზში სერვერი არ არის - ღილაკი ჯავშანს ამზადებს და WhatsApp-ში ან
+          ელფოსტაში ხსნის. რეალურ საიტზე აქ ჯავშნების სისტემა ჩაჯდება.
+        </p>
+      </form>
+
+      <aside class="book-summary" id="book-summary" aria-live="polite"></aside>
+    </div>
+  </section>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo"><span class="logo-box">NET</span><span class="logo-tail">work</span></span>
+      <p>დამოუკიდებელი coworking სივრცე თბილისში. ღიაა 24 საათი, კვირაში 7 დღე.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="mt">მისამართი</h4>
+      <p>ილია ჭავჭავაძის გამზირი 33<br>თბილისი 0179</p>
+      <a href="#/" data-link>პარკინგი და გზა →</a>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="mt">საათები</h4>
+      <p>ორშ-კვი · 24 საათი</p>
+      <p data-placeholder>[ადმინისტრაცია - საათები]</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="mt">კონტაქტი</h4>
+      <a href="tel:+995505555885">+995 505 55 58 85</a>
+      <a href="https://www.instagram.com/networktbilisi/" target="_blank" rel="noopener">@networktbilisi</a>
+      <a href="#/book" data-link>დაჯავშნა →</a>
+    </div>
+
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> NETWORK</span>
+    <span class="footer-draft mt">ესკიზი - Gridly</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
