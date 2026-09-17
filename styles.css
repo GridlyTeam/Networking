@@ -571,6 +571,10 @@ a { color: inherit; }
   }
   .nav.open { display: flex; }
   .nav a { padding: 13px 0; border-bottom: 1px solid var(--line); }
+  /* The open nav is positioned, so it drops out of the flex flow and takes
+     its margin-left:auto with it. Without this the button and the toggle
+     collapse back against the logo instead of holding the right edge. */
+  .header-actions { margin-left: auto; }
 }
 
 @media (max-width: 620px) {
