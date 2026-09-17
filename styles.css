@@ -514,13 +514,16 @@ a { color: inherit; }
 .footer-draft { color: var(--note); font-weight: 700; font-size: 0.62rem; }
 
 /* ---- Back to top ----
-   Square, bordered and red like the rest of the furniture - no pill, no
-   drop shadow. Kept out of the flow until the header is well out of sight. */
+   The one round thing on the page, which is what lets it read as a control
+   floating over the layout rather than another box in it. Still the page's
+   red and brown, and still no drop shadow. Hidden until the header is well
+   out of sight. */
 .to-top {
   position: fixed;
   right: 22px; bottom: 22px;
   z-index: 60;
   width: 48px; height: 48px;
+  border-radius: 50%;
   display: grid; place-items: center;
   padding: 0;
   background: var(--red);
