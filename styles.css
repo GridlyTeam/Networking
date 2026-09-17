@@ -541,6 +541,24 @@ a { color: inherit; }
 .to-top svg { width: 21px; height: 21px; display: block; }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: opacity 0.2s, visibility 0.2s; transform: none; } }
 
+/* On a wide monitor a 48px button pinned to the viewport corner is both small
+   and a long way from anything - the content stops at --wrap and the corner is
+   hundreds of pixels further out. Grow it, and bring its right edge in to sit
+   just outside the content column instead of out at the screen edge. The max()
+   keeps the plain corner inset until the margins are actually wide enough. */
+@media (min-width: 1500px) {
+  .to-top {
+    width: 58px; height: 58px;
+    right: max(34px, calc((100vw - var(--wrap)) / 2 - 78px));
+    bottom: 34px;
+  }
+  .to-top svg { width: 25px; height: 25px; }
+}
+@media (min-width: 2100px) {
+  .to-top { width: 68px; height: 68px; bottom: 44px; }
+  .to-top svg { width: 29px; height: 29px; }
+}
+
 /* ---- Responsive ----
    Four steps: the wide grids fold at 1080, the two-column page layouts at 960,
    navigation goes behind the toggle at 900, and the phone sizes take over at
