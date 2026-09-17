@@ -511,6 +511,17 @@
     if (ok) $('#news-email').value = '';
   });
 
+  // Back to top. Shown once the hero is behind you, and the scroll listener is
+  // passive so it never blocks the gesture it is watching.
+  const toTop = $('#to-top');
+  const syncToTop = () => toTop.classList.toggle('show', window.scrollY > 620);
+  window.addEventListener('scroll', syncToTop, { passive: true });
+  syncToTop();
+  toTop.addEventListener('click', () => {
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: still ? 'auto' : 'smooth' });
+  });
+
   // Clicking a hash link that is already the current hash fires no hashchange,
   // so the view would never re-sync. Route explicitly instead.
   document.addEventListener('click', (e) => {
