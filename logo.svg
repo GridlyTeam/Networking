@@ -1,22 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="NETWORK">
-  <!-- Three shapes off one primitive. The droplet is a 3/4 circle closed with a
-       sharp corner; rotating it aims the tip. The green bar is the same idea
-       stretched - a capsule drawn as a fat round-capped line.
+  <!-- A letter N, drawn as three strokes of equal weight.
 
-       Tip aim is the one thing worth nudging: each droplet's rotate() is
-       (tip direction in degrees) - 45, where 0 is right and 90 is down. -->
+       The green is the diagonal. Red and yellow are the stems, reduced to the
+       one end of each that the diagonal does not already account for - red the
+       foot of the left stem, yellow the head of the right - lying along its
+       flanks. The diagonal lies at 43.2deg and its midpoint is the centre of
+       everything; each stem sits 66 out along the perpendicular, one to a side,
+       and red is the exact 180deg rotation of yellow about that centre.
 
-  <!-- yellow, tip down and slightly left -> 100deg -->
-  <g transform="translate(150 56) rotate(55)">
-    <path d="M36,0 A36,36 0 1,0 0,36 L36,36 Z" fill="#edc22e"/>
+       Each stem is a pin: a circle of r=28 at its outer end, plus two tangent
+       lines closing to a point d=76 away. Tangents touch the circle at
+       +/-acos(r/d), putting the corners at (10.32, +/-26.03).
+
+       The pins are NOT set at the diagonal's own angle. A pin tapers, so laying
+       it parallel would leave its inner edge converging on the diagonal and the
+       seam between them opening into a wedge. The taper is asin(r/d) = 21.6deg
+       off the pin's axis, so tilting each pin that much further over - to
+       43.2+21.6 = 64.8, and 244.8 for the red - brings the inner edge back
+       parallel to the diagonal and holds the seam at a constant 10 the whole way
+       down. Widening the points means re-deriving both: raise d, and the tilt
+       asin(r/d) closes up to match. -->
+
+  <!-- foot of the left stem, lying along the diagonal's lower-left flank -->
+  <g transform="translate(54.8 148.09) rotate(244.82)">
+    <path d="M76,0 L10.32,-26.03 A28,28 0 1,0 10.32,26.03 Z" fill="#d8323f"/>
   </g>
 
-  <!-- red, tip up and slightly right -> 280deg, the yellow turned 180 -->
-  <g transform="translate(50 144) rotate(235)">
-    <path d="M36,0 A36,36 0 1,0 0,36 L36,36 Z" fill="#d8323f"/>
+  <!-- head of the right stem, lying along the diagonal's upper-right flank -->
+  <g transform="translate(145.2 51.91) rotate(64.82)">
+    <path d="M76,0 L10.32,-26.03 A28,28 0 1,0 10.32,26.03 Z" fill="#edc22e"/>
   </g>
 
-  <!-- green last so it reads as the shape in front -->
-  <line x1="80" y1="44" x2="140" y2="156"
-        stroke="#24a97a" stroke-width="66" stroke-linecap="round"/>
+  <!-- the diagonal -->
+  <line x1="50" y1="53" x2="150" y2="147"
+        stroke="#24a97a" stroke-width="56" stroke-linecap="round"/>
 </svg>
