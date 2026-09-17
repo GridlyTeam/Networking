@@ -96,6 +96,8 @@ a { color: inherit; }
 .header-inner { display: flex; align-items: center; gap: 24px; min-height: 64px; }
 
 .logo { display: inline-flex; align-items: baseline; gap: 5px; text-decoration: none; flex-shrink: 0; }
+/* The mark sits on the wordmark's optical centre, not its baseline. */
+.logo-mark { width: 30px; height: 30px; align-self: center; margin-right: 3px; }
 .logo-box {
   background: var(--brown);
   color: var(--cream);

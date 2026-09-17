@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="NETWORK">
+  <!-- Three shapes off one primitive. The droplet is a 3/4 circle closed with a
+       sharp corner; rotating it aims the tip. The green bar is the same idea
+       stretched - a capsule drawn as a fat round-capped line.
+
+       Tip aim is the one thing worth nudging: each droplet's rotate() is
+       (tip direction in degrees) - 45, where 0 is right and 90 is down. -->
+
+  <!-- yellow, tip down and slightly left -> 100deg -->
+  <g transform="translate(150 56) rotate(55)">
+    <path d="M36,0 A36,36 0 1,0 0,36 L36,36 Z" fill="#edc22e"/>
+  </g>
+
+  <!-- red, tip up and slightly right -> 280deg, the yellow turned 180 -->
+  <g transform="translate(50 144) rotate(235)">
+    <path d="M36,0 A36,36 0 1,0 0,36 L36,36 Z" fill="#d8323f"/>
+  </g>
+
+  <!-- green last so it reads as the shape in front -->
+  <line x1="80" y1="44" x2="140" y2="156"
+        stroke="#24a97a" stroke-width="66" stroke-linecap="round"/>
+</svg>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NETWORK - coworking სივრცე თბილისში</title>
-<meta name="description" content="ნეთვორქი - coworking სივრცე ილია ჭავჭავაძის გამზირზე, თბილისში. ღიაა 24/7. თავისუფალი და ფიქსირებული მაგიდები, პირადი ოფისები და შეხვედრების ოთახები.">
+<meta name="description" content="ნეთვორქი - coworking სივრცე ილია ჭავჭავაძის გამზირზე, თბილისში. ღიაა 24/7. თავისუფალი და ფიქსირებული სამუშაო ადგილები, პირადი ოფისები და შეხვედრების ოთახები.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600;700;900&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +31,7 @@
 <header class="site-header" id="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="#/" data-link aria-label="NETWORK, მთავარი">
+      <img class="logo-mark" src="logo.svg" alt="" width="200" height="200">
       <span class="logo-box">NET</span><span class="logo-tail">work</span>
     </a>
 
@@ -44,8 +45,7 @@
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn-line btn-sm mt" href="#/book?type=tour" data-link>ტური</a>
-      <a class="btn btn-red btn-sm mt" href="#/book?type=day" data-link>დღიური ბარათი</a>
+      <a class="btn btn-red btn-sm mt" href="#/book" data-link>დაჯავშნა</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="მენიუს გახსნა" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -62,12 +62,12 @@
     <span class="hero-watermark" aria-hidden="true">NETWORK</span>
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow mt">ნამდვილი მაგიდა · ვაკე-საბურთალო</p>
+        <p class="eyebrow mt">შენი სამუშაო ადგილი · ვაკე-საბურთალო</p>
         <h1 class="display mt">იმუშავე<br>შენებურად.</h1>
         <p class="lead">
           დამოუკიდებელი coworking სივრცე ილია ჭავჭავაძის გამზირზე.
-          ღიაა 24 საათი. <b>გადაიხადე</b> დღეში, კვირაში ან თვეში -
-          გრძელვადიანი ხელშეკრულების გარეშე.
+          ღიაა 24 საათი. <b>გადაიხადე</b> დღიურად, ყოველკვირეულად ან ყოველთვიურად —
+          გრძელვადიანი ვალდებულების გარეშე.
         </p>
         <div class="btn-row">
           <a class="btn btn-red" href="#/book?type=day" data-link><span class="mt">დღიური ბარათი</span></a>
@@ -106,7 +106,7 @@
         <h2 class="display mt">აირჩიე, რაც გიხდება.</h2>
         <a class="link-more mt" href="#/plans" data-link>ყველა ტარიფი დეტალურად →</a>
       </div>
-      <p class="section-sub">გასაწევრიანების საფასური არ არის. გრძელვადიანი ვალდებულება არ არის.</p>
+      <p class="section-sub">გაწევრიანების საფასურის გარეშე. გრძელვადიანი ვალდებულების გარეშე.</p>
       <div class="plan-grid" id="home-plans"></div>
       <p class="tbd-note">ფასები შესავსებია - ციფრები კლიენტისგან უნდა მოვიდეს.</p>
     </div>
@@ -140,7 +140,7 @@
         <h2 class="display mt">ოთახი.<br><em>და სკამები.</em></h2>
         <p class="lead">
           პრეზენტაცია, გასაუბრება, გუნდური შეკრება ან საღამოს ივენთი.
-          წევრებისთვის ფასი შემცირებულია.
+          წევრებისთვის — ფასდაკლებით.
         </p>
         <ul class="minitable" id="home-rooms"></ul>
         <a class="btn btn-red" href="#/offices" data-link><span class="mt">ოთახების ნახვა</span></a>
@@ -177,7 +177,7 @@
             <b data-placeholder>[N]</b>
           </div>
         </div>
-        <a class="link-more mt" href="#/offices" data-link>ყველა ოფისი და თავისუფლება →</a>
+        <a class="link-more mt" href="#/offices" data-link>ყველა ოფისი და ხელმისაწვდომობა →</a>
       </div>
     </div>
   </section>
@@ -185,7 +185,7 @@
   <section class="band">
     <div class="wrap">
       <p class="eyebrow mt">რა არის სივრცეში</p>
-      <h2 class="display mt">ყველაფერი, რაც სამუშაოდ სჭირდება.</h2>
+      <h2 class="display mt">ყველაფერი, რაც სამუშაოდ გჭირდება.</h2>
       <ul class="amenity-grid" id="home-amenities"></ul>
     </div>
   </section>
@@ -218,8 +218,7 @@
   <section class="band cta-band">
     <div class="wrap">
       <div class="cta-box">
-        <p class="eyebrow mt">ხელშეკრულება არ არის. ზედმეტი სიტყვები არ არის.</p>
-        <h2 class="display mt">შემოიარე.<br>დაჯექი მაგიდასთან.</h2>
+        <h2 class="display mt">შემოიარე.<br>დაიწყე მუშაობა.</h2>
         <p class="cta-price" data-tbd></p>
         <p class="lead">აიღე დღიური ბარათი ან დაჯავშნე 20-წუთიანი ტური. თუ მოგეწონა, დარჩი.</p>
         <div class="btn-row">
@@ -233,8 +232,8 @@
   <section class="newsletter">
     <div class="wrap news-inner">
       <div>
-        <h3 class="display mt">სიახლეები 33-დან.</h3>
-        <p>იშვიათად. ელფოსტას არასდროს გავცემთ.</p>
+        <h3 class="display mt">სიახლეები ჭავჭავაძის 33-დან.</h3>
+        <p>იშვიათად. შენს ელფოსტას არავის გავუზიარებთ.</p>
       </div>
       <form class="news-form" id="news-form" novalidate>
         <input type="email" id="news-email" placeholder="you@work.com" aria-label="ელფოსტა">
@@ -254,7 +253,7 @@
       <h1 class="display mt">ერთი დღე, ერთი თვე<br>ან შენი ოფისი.</h1>
       <p class="lead">
         ყველა ტარიფში შედის ინტერნეტი, ყავა და ჩაი, სამზარეულო, ფონ-ბუთები და
-        დასასვენებელი ზონა. გასაწევრიანების საფასური არ არის.
+        დასასვენებელი ზონა. გაწევრიანების საფასურის გარეშე.
       </p>
     </div>
   </div>
@@ -268,7 +267,7 @@
 
   <section class="band band-tan">
     <div class="wrap">
-      <p class="eyebrow mt">შედის ყველგან</p>
+      <p class="eyebrow mt">შედის ყველა ტარიფში</p>
       <h2 class="display mt">რა შედის ყველა ტარიფში.</h2>
       <ul class="amenity-grid" id="plans-amenities"></ul>
     </div>
@@ -288,7 +287,7 @@
   <div class="page-head">
     <div class="wrap">
       <p class="eyebrow mt">ოფისები და ოთახები</p>
-      <h1 class="display mt">დახურული კარი,<br>როცა გჭირდება.</h1>
+      <h1 class="display mt">პირადი სივრცე,<br>როცა გჭირდება.</h1>
       <p class="lead">პირადი ოფისები მცირე გუნდებისთვის და შეხვედრების ოთახები საათობრივად.</p>
     </div>
   </div>
@@ -334,12 +333,12 @@
   <section class="band band-dark">
     <div class="wrap two-col">
       <div>
-        <p class="eyebrow mt">დაიქირავე სივრცე</p>
+        <p class="eyebrow mt">სივრცის ქირაობა</p>
         <h2 class="display mt">შენი ივენთი,<br><em>ჩვენი დარბაზი.</em></h2>
         <p class="lead">
           საღამოს სივრცე თავისუფლდება - პროექტორით, სკამებით და ყავით.
         </p>
-        <a class="btn btn-red" href="#/book?type=event" data-link><span class="mt">ივენთის შესახებ წერა</span></a>
+        <a class="btn btn-red" href="#/book?type=event" data-link><span class="mt">მოგვწერეთ ივენთის შესახებ</span></a>
       </div>
       <figure class="figure">
         <div class="photo photo-wide" data-photo="ივენთი სივრცეში, საღამო"></div>
@@ -395,7 +394,7 @@
       <p class="eyebrow mt">სივრცის შესახებ</p>
       <h1 class="display mt">სივრცე, რომელსაც<br>ადამიანები ქმნიან.</h1>
       <p class="lead">
-        ნეთვორქი ქალის მფლობელობაშია და მუშაობს როგორც ღია, უსაფრთხო სივრცე
+        ნეთვორქი დაფუძნებულია ქალის მიერ და მუშაობს როგორც ღია, უსაფრთხო სივრცე
         ყველასთვის, ვინც აქ მუშაობს.
       </p>
     </div>
@@ -405,16 +404,16 @@
     <div class="wrap">
       <ul class="value-grid">
         <li>
-          <h3 class="mt">ქალის მფლობელობაში</h3>
-          <p>სივრცე დაარსებულია და იმართება ქალის მიერ.</p>
+          <h3 class="mt">დაფუძნებულია ქალის მიერ</h3>
+          <p>სივრცე ქალმა დააფუძნა და დღემდე ის მართავს.</p>
         </li>
         <li>
           <h3 class="mt">LGBTQ+ მეგობრული</h3>
-          <p>ღია და უსაფრთხო სივრცე, მათ შორის ტრანს-ადამიანებისთვის.</p>
+          <p>ღია და უსაფრთხო სივრცე, მათ შორის ტრანსგენდერი ადამიანებისთვის.</p>
         </li>
         <li>
           <h3 class="mt">ადაპტირებული გარემო</h3>
-          <p>ეტლით მოსარგებლეთათვის შესასვლელი, სამუშაო ადგილი და სველი წერტილი.</p>
+          <p>ეტლით მოსარგებლეებისთვის მისაწვდომი შესასვლელი, სამუშაო ადგილი და სველი წერტილი.</p>
         </li>
         <li>
           <h3 class="mt">გენდერულად ნეიტრალური</h3>
@@ -456,7 +455,7 @@
   <div class="page-head">
     <div class="wrap">
       <p class="eyebrow mt">დაჯავშნა</p>
-      <h1 class="display mt">დაგვიტოვე მოთხოვნა.</h1>
+      <h1 class="display mt">დატოვე განაცხადი.</h1>
       <p class="lead">შეავსე ფორმა და გამოგვიგზავნე - დაგიკავშირდებით სამუშაო საათებში.</p>
     </div>
   </div>
@@ -519,7 +518,7 @@
 
         <label class="consent">
           <input type="checkbox" id="book-consent" required>
-          <span>ვეთანხმები, რომ დამიკავშირდნენ ამ მოთხოვნასთან დაკავშირებით.</span>
+          <span>ვეთანხმები, რომ დამიკავშირდეთ ამ მოთხოვნის თაობაზე.</span>
         </label>
         <p class="err" data-err="consent"></p>
 
@@ -542,7 +541,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="logo"><span class="logo-box">NET</span><span class="logo-tail">work</span></span>
+      <span class="logo"><img class="logo-mark" src="logo.svg" alt="" width="200" height="200"><span class="logo-box">NET</span><span class="logo-tail">work</span></span>
       <p>დამოუკიდებელი coworking სივრცე თბილისში. ღიაა 24 საათი, კვირაში 7 დღე.</p>
     </div>
 
