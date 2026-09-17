@@ -168,7 +168,7 @@
     return `
       <article class="plan${p.featured ? ' featured' : ''}">
         ${p.tag ? `<span class="plan-tag mt">${p.tag}</span>` : ''}
-        <h3 class="plan-name mt">${p.name}</h3>
+        <h3 class="plan-name">${p.name}</h3>
         <div class="plan-price">${bigPrice(p.price)} <span class="unit">/ ${p.unit}</span></div>
         <p class="plan-desc">${p.desc}</p>
         ${compact ? '' : `<ul>${p.includes.map((i) => `<li>${i}</li>`).join('')}</ul>`}
@@ -193,7 +193,7 @@
       <article class="office-card">
         <div class="photo" data-photo="${o.photo}"></div>
         <div class="office-body">
-          <h3 class="office-name mt">${o.name}</h3>
+          <h3 class="office-name">${o.name}</h3>
           <p class="office-meta">${o.meta}</p>
           <div class="office-price">${bigPrice(o.price)} <span class="unit">/ თვე</span></div>
           <a class="link-more mt" href="#/book?type=office" data-link>დაინტერესება →</a>
@@ -204,7 +204,7 @@
       <article class="office-card">
         <div class="photo" data-photo="${r.name}"></div>
         <div class="office-body">
-          <h3 class="office-name mt">${r.name}</h3>
+          <h3 class="office-name">${r.name}</h3>
           <p class="office-meta">${r.seats} · ${r.extra}</p>
           <div class="office-price">${bigPrice(r.price)} <span class="unit">/ სთ</span></div>
           <a class="link-more mt" href="#/book?type=room" data-link>დაჯავშნა →</a>
@@ -389,7 +389,7 @@
   }
 
   function prettyDate(value) {
-    if (!value) return '—';
+    if (!value) return '-';
     const [y, m, d] = value.split('-').map(Number);
     return `${d} ${MONTHS[m - 1]} ${y}`;
   }
@@ -403,7 +403,7 @@
       ['მოთხოვნა', v.typeLabel],
       ['თარიღი', prettyDate(v.date)],
     ];
-    if (v.type !== 'day') rows.push(['დრო', v.time || '—']);
+    if (v.type !== 'day') rows.push(['დრო', v.time || '-']);
     if (showExtra) {
       rows.push(['ხანგრძლივობა', DURATIONS[v.duration] || v.duration]);
       rows.push(['ადამიანი', v.people || '1']);
@@ -412,8 +412,7 @@
 
     $('#book-summary').innerHTML = `
       <h3>შენი მოთხოვნა</h3>
-      ${rows.map(([k, val]) => `<div class="sum-row"><span>${k}</span><b>${val}</b></div>`).join('')}
-      <p class="tbd-note">ფასი შესავსებია.</p>`;
+      ${rows.map(([k, val]) => `<div class="sum-row"><span>${k}</span><b>${val}</b></div>`).join('')}`;
   }
 
   function showError(field, message) {
@@ -490,8 +489,7 @@
       <div class="sum-actions">
         <a class="btn btn-primary" href="${wa}" target="_blank" rel="noopener">WhatsApp-ით გაგზავნა</a>
         <a class="btn btn-ghost" href="${mail}">ელფოსტით გაგზავნა</a>
-      </div>
-      <p class="tbd-note">ესკიზში სერვერი არ არის - რეალურ საიტზე მოთხოვნა პირდაპირ სივრცეს მიუვა.</p>`;
+      </div>`;
     $('#book-summary').scrollIntoView({ block: 'center', behavior: 'smooth' });
   });
 

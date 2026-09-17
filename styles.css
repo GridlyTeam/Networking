@@ -288,7 +288,7 @@ a { color: inherit; }
   font-size: 0.56rem; font-weight: 700; letter-spacing: 0.11em;
   padding: 4px 9px;
 }
-.plan-name { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.13em; margin-bottom: 10px; }
+.plan-name { font-size: 1rem; font-weight: 700; letter-spacing: 0; margin-bottom: 10px; }
 .plan-price { font-family: var(--display); font-weight: 900; font-size: 2.3rem; line-height: 1; white-space: nowrap; }
 .plan-price .unit { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; }
 .plan-desc { font-size: 0.9rem; margin: 12px 0 14px; }
@@ -315,12 +315,6 @@ a { color: inherit; }
   margin-left: 0.12em;
 }
 
-.tbd-note {
-  margin-top: 24px;
-  font-size: 0.84rem;
-  border-left: 3px solid var(--red);
-  padding: 7px 0 7px 13px;
-}
 [data-placeholder] { color: var(--red); }
 .band-dark [data-placeholder] { color: var(--note); }
 
@@ -373,7 +367,7 @@ a { color: inherit; }
 .office-card { border: 2px solid var(--brown); background: var(--cream); display: flex; flex-direction: column; }
 .office-card .photo { border: none; border-bottom: 2px solid var(--brown); min-height: 165px; }
 .office-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
-.office-name { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 8px; }
+.office-name { font-size: 1rem; font-weight: 700; letter-spacing: 0; margin-bottom: 8px; }
 .office-meta { font-size: 0.85rem; margin-bottom: 10px; }
 .office-price { font-family: var(--display); font-weight: 900; font-size: 1.5rem; margin-bottom: 16px; white-space: nowrap; }
 .office-price .unit { font-family: var(--body); font-size: 0.72rem; font-weight: 600; }
@@ -393,7 +387,7 @@ a { color: inherit; }
 .value-grid, .member-grid { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 16px; }
 .value-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 .value-grid li { border: 2px solid var(--brown); padding: 20px; background: var(--cream); }
-.value-grid h3 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.11em; margin: 0 0 8px; }
+.value-grid h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: 0; margin: 0 0 8px; }
 .value-grid p { margin: 0; font-size: 0.9rem; }
 .member-grid { grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); }
 .member-grid li {
@@ -484,7 +478,6 @@ a { color: inherit; }
 
 .consent { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; }
 .consent input { margin-top: 5px; flex-shrink: 0; }
-.form-note { font-size: 0.83rem; margin: 0; }
 
 .book-summary { border: 2px solid var(--brown); background: var(--cream-2); padding: 22px; position: sticky; top: 86px; }
 .book-summary h3 { font-family: var(--display); font-weight: 900; font-size: 1.15rem; letter-spacing: 0.04em; margin: 0 0 14px; }
