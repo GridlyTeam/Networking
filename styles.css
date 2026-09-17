@@ -529,6 +529,10 @@ a { color: inherit; }
 .footer-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 28px; padding-bottom: 38px; }
 .footer-brand .logo-box { background: var(--cream); color: var(--brown); }
 .footer-brand p { font-size: 0.87rem; margin-top: 12px; max-width: 32ch; }
+/* Instagram glyph, inline ahead of the handle. Inherits the link's colour,
+   so it follows the footer's hover and the dark band without extra rules. */
+.ig { width: 1.05em; height: 1.05em; vertical-align: -0.2em; margin-right: 6px; }
+
 .footer-col { display: flex; flex-direction: column; gap: 7px; }
 .footer-col h4 { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.13em; margin: 0 0 6px; color: var(--note); }
 .footer-col a { font-size: 0.87rem; text-decoration: none; }
