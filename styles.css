@@ -541,24 +541,6 @@ a { color: inherit; }
 .to-top svg { width: 21px; height: 21px; display: block; }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: opacity 0.2s, visibility 0.2s; transform: none; } }
 
-/* On a wide monitor a 48px button pinned to the viewport corner is both small
-   and a long way from anything - the content stops at --wrap and the corner is
-   hundreds of pixels further out. Grow it, and bring its right edge in to sit
-   just outside the content column instead of out at the screen edge. The max()
-   keeps the plain corner inset until the margins are actually wide enough. */
-@media (min-width: 1500px) {
-  .to-top {
-    width: 58px; height: 58px;
-    right: max(34px, calc((100vw - var(--wrap)) / 2 - 78px));
-    bottom: 34px;
-  }
-  .to-top svg { width: 25px; height: 25px; }
-}
-@media (min-width: 2100px) {
-  .to-top { width: 68px; height: 68px; bottom: 44px; }
-  .to-top svg { width: 29px; height: 29px; }
-}
-
 /* ---- Responsive ----
    Four steps: the wide grids fold at 1080, the two-column page layouts at 960,
    navigation goes behind the toggle at 900, and the phone sizes take over at
@@ -637,3 +619,22 @@ a { color: inherit; }
   .cal-cell { font-size: 0.78rem; }
   .cal-dow span { font-size: 0.52rem; }
 }
+
+/* ---- Large displays ----
+   The content column is a fixed 1240px, so the wider the monitor the smaller
+   the page looks inside it - at 4k it fills about a third of the screen and
+   everything reads as a postage stamp in a field of cream. Rather than
+   rebuilding the layout for one class of display, zoom the document: the
+   proportions a laptop shows are the intended ones, so each step trades screen
+   width for scale to hold the effective viewport near 1500px. Everything
+   follows - type, padding, borders, the fixed button - because zoom reflows
+   rather than transforming, so nothing blurs and nothing overflows.
+
+   Media queries still measure the real viewport, so the breakpoints below are
+   true screen widths. Every vw-based size on the page is inside a clamp() that
+   has bottomed out by this width, so none of them fight the zoom. */
+@media (min-width: 1700px) { :root { zoom: 1.15; } }
+@media (min-width: 2000px) { :root { zoom: 1.35; } }
+@media (min-width: 2400px) { :root { zoom: 1.60; } }
+@media (min-width: 2900px) { :root { zoom: 1.95; } }
+@media (min-width: 3500px) { :root { zoom: 2.35; } }

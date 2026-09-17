@@ -163,6 +163,25 @@
   });
 
   /* ---------------- Rendering ---------------- */
+  /* The strip is two identical halves and the animation slides it exactly half
+     its width, which is seamless only while one half is at least as wide as the
+     screen. Seven phrases come to roughly 1500px, so on anything wider the
+     strip slides into empty space and snaps back. Repeat the phrases enough
+     times to cover the viewport first, then double that. Duration follows the
+     width so the speed stays put instead of racing on a wide monitor. */
+  const MARQUEE_PX_PER_SEC = 42;
+
+  function buildMarquee() {
+    const track = $('#marquee-track');
+    if (!track) return;
+    const run = MARQUEE.map((m) => `<span>${m}</span><span class="sep">✦</span>`).join('');
+    track.innerHTML = toMtavruli(run);
+    const runWidth = track.scrollWidth || 1;
+    const copies = Math.max(1, Math.ceil(window.innerWidth / runWidth));
+    track.innerHTML = toMtavruli(run.repeat(copies * 2));
+    track.style.animationDuration = `${(runWidth * copies) / MARQUEE_PX_PER_SEC}s`;
+  }
+
 
   function planCard(p, compact) {
     return `
@@ -224,9 +243,7 @@
         <span class="event-tag mt">${e.tag}</span>
       </article>`).join('');
 
-    // Two copies of the strip, so the scroll can loop at -50% without a seam.
-    const run = MARQUEE.map((m) => `<span>${m}</span><span class="sep">✦</span>`).join('');
-    $('#marquee-track').innerHTML = toMtavruli(run + run);
+    buildMarquee();
 
     // Standalone price slots in the markup - the hero tag, the CTA, the
     // "from" block - all read the same blank as everything else.
@@ -532,6 +549,16 @@
   });
 
   renderStatic();
+  // Measured before the Georgian webfont lands, the phrase widths are wrong,
+  // so size the strip again once it has. Width is all that matters on resize.
+  if (document.fonts) document.fonts.ready.then(buildMarquee);
+  let marqueeW = window.innerWidth, marqueeTimer;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth === marqueeW) return;
+    marqueeW = window.innerWidth;
+    clearTimeout(marqueeTimer);
+    marqueeTimer = setTimeout(buildMarquee, 180);
+  });
   /* Everything marked .mt goes to Mtavruli once, after rendering. Walk the
      text nodes rather than rewriting textContent: several headings carry a
      <br> or an <em>, and assigning textContent would flatten them away.
