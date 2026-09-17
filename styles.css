@@ -206,11 +206,14 @@ a { color: inherit; }
 }
 .photo-hero { min-height: 330px; }
 .photo-wide { min-height: 320px; }
+/* Body font, not mono - the mono stack has no Georgian, so captions fell back
+   to whatever the OS offered and came out thin and unrelated to the page. */
 .figure figcaption {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-family: var(--body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
   padding-top: 8px;
 }
 
