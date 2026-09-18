@@ -375,19 +375,6 @@ a { color: inherit; }
 .event-body p { margin: 0; font-size: 0.88rem; }
 .event-tag { font-size: 0.56rem; font-weight: 700; background: var(--note); border: 2px solid var(--brown); padding: 5px 10px; white-space: nowrap; }
 
-/* ---- Values / members ---- */
-.value-grid, .member-grid { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 16px; }
-.value-grid { grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); }
-.value-grid li { border: 2px solid var(--brown); padding: 20px; background: var(--cream); }
-.value-grid h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: 0; margin: 0 0 8px; }
-.value-grid p { margin: 0; font-size: 0.9rem; }
-.member-grid { grid-template-columns: repeat(auto-fit, minmax(min(155px, 100%), 1fr)); }
-.member-grid li {
-  border: 2px dashed var(--line-dark);
-  padding: 26px 14px; text-align: center;
-  font-size: 0.8rem; font-weight: 700; color: var(--red);
-}
-
 /* ---- Calendar ---- */
 .cal-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; align-items: start; }
 .cal { border: 2px solid var(--brown); padding: 20px; background: var(--cream); }

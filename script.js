@@ -113,8 +113,6 @@
       ['სტუმრის მოყვანა შეიძლება?', '[პასუხი - შესავსებია]'],
       ['რა ხდება, თუ გავაუქმებ?', '[გაუქმების პირობები - შესავსებია]'],
     ],
-
-    members: ['[ლოგო 1]', '[ლოგო 2]', '[ლოგო 3]', '[ლოგო 4]', '[ლოგო 5]', '[ლოგო 6]'],
   };
 
   const BOOK_TYPES = [
@@ -254,8 +252,6 @@
         <summary>${q}</summary>
         <p>${a}</p>
       </details>`).join('');
-
-    $('#member-grid').innerHTML = DATA.members.map((m) => `<li>${m}</li>`).join('');
 
     $('#book-type').innerHTML = BOOK_TYPES.map((t, i) => `
       <label class="choice">
