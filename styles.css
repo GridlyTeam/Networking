@@ -507,11 +507,79 @@ a { color: inherit; }
 .footer-col a:hover { color: var(--note); }
 .footer-col p { font-size: 0.87rem; margin: 0; }
 .footer-bottom {
-  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   border-top: 1px solid var(--line-dark);
   padding-block: 16px; font-size: 0.75rem;
 }
 .footer-draft { color: var(--note); font-weight: 700; font-size: 0.62rem; }
+/* ---- Maker's mark ----
+   The credit that goes at the foot of every site we build, and at the foot of
+   this one. Article 6.6 of the contract names it, so it has to look like
+   something a client is content to leave in place rather than fine print they
+   scroll past.
+
+   Written to be copied out of here verbatim into a site that has none of the
+   tokens above, which is why every colour is either a literal, `inherit`, or a
+   var() with a literal fallback. The greys are neutral by design: the same
+   rgba reads correctly on a light ground and a dark one, so the badge does not
+   need to know which it landed on. Only the mark keeps brand colour - that is
+   the part that must not adapt. */
+.made-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 14px 7px 8px;
+  border: 1px solid rgba(127, 132, 150, 0.3);
+  border-radius: 999px;
+  background: rgba(127, 132, 150, 0.08);
+  color: var(--text-dim, inherit);
+  font-size: 0.78rem;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+/* Not `opacity: 1` on hover like the links beside it: this is a button-shaped
+   thing, so it answers like one - lifts a little, and the mark's own glow
+   spreads to the whole pill. */
+.made-by:hover,
+.made-by:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(99, 102, 241, 0.55);
+  box-shadow: 0 6px 18px -6px rgba(99, 102, 241, 0.55);
+}
+.made-by-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; height: 26px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  /* The literal stops, not var(--gradient): on a client site there is no such
+     variable and the mark would fall back to no background at all. */
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #22d3ee 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.86rem;
+  letter-spacing: -0.02em;
+}
+/* Two lines rather than one: the verb sits above the name, which keeps the
+   pill short enough to live on a footer line and gives the name a line of its
+   own to be read on. Centred, because the two lines are never the same width -
+   "Made by" is wider than "Gridly", and left-aligned the name sat off to one
+   side of the verb above it. */
+.made-by-text { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+/* The verb is the quiet half; the name is what anyone is meant to remember. */
+.made-by-label { opacity: 0.72; font-size: 0.72rem; }
+/* Only the name carries the weight - the case ending beside it is grammar,
+   not brand, and bolding it would read as part of the word. */
+.made-by-name { color: var(--text, inherit); font-weight: 400; }
+.made-by-name b { font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  .made-by { transition: none; }
+  .made-by:hover, .made-by:focus-visible { transform: none; }
+}
 
 /* ---- Back to top ----
    The one round thing on the page, which is what lets it read as a control
